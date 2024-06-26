@@ -1,0 +1,4 @@
+name: kVouchers
+version: '${version}'
+main: net.starfal.kvouchers.KVouchers
+api-version: '1.21'
