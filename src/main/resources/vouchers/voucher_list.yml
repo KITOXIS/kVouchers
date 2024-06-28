@@ -1,0 +1,14 @@
+#
+#
+#    ██   ██ ██    ██  ██████  ██    ██  ██████ ██   ██ ███████ ██████  ███████
+#    ██  ██  ██    ██ ██    ██ ██    ██ ██      ██   ██ ██      ██   ██ ██
+#    █████   ██    ██ ██    ██ ██    ██ ██      ███████ █████   ██████  ███████
+#    ██  ██   ██  ██  ██    ██ ██    ██ ██      ██   ██ ██      ██   ██      ██
+#    ██   ██   ████    ██████   ██████   ██████ ██   ██ ███████ ██   ██ ███████
+#
+#  This is the voucher list file for the plugin.
+#  You CANNOT change the values to your liking.
+#  Since this file is managed by the plugin, you should not edit anything here!
+#  Unless, you deleted a voucher file from the vouchers folder and you want to remove it from the list.
+#
+Vouchers: []

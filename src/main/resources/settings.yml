@@ -1,0 +1,25 @@
+#
+#
+#    ██   ██ ██    ██  ██████  ██    ██  ██████ ██   ██ ███████ ██████  ███████
+#    ██  ██  ██    ██ ██    ██ ██    ██ ██      ██   ██ ██      ██   ██ ██
+#    █████   ██    ██ ██    ██ ██    ██ ██      ███████ █████   ██████  ███████
+#    ██  ██   ██  ██  ██    ██ ██    ██ ██      ██   ██ ██      ██   ██      ██
+#    ██   ██   ████    ██████   ██████   ██████ ██   ██ ███████ ██   ██ ███████
+#
+#  This is the configuration file for the plugin.
+#  You can change the values to your liking.
+#  If you have any questions, feel free to ask in the support discord.
+#  https://starfal.net/discord
+#
+Vouchers: # Should these commands be enabled?
+  CreateVouchers: true
+  DeleteVouchers: true
+  RenameVouchers: true
+Permissions: # The permissions for the commands.
+  Admin: "kvouchers.admin" # The permission for the admin commands like reload.
+  MainMenu: "kvouchers.main"
+  CreateVoucher: "kvouchers.create"
+  DeleteVoucher: "kvouchers.delete"
+  ListVouchers: "kvouchers.list"
+  RenameVoucher: "kvouchers.rename"
+  RedeemVoucher: "kvouchers.redeem"

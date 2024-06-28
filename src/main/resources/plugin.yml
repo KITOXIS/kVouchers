@@ -2,3 +2,10 @@ name: kVouchers
 version: '${version}'
 main: net.starfal.kvouchers.KVouchers
 api-version: '1.21'
+authors: [ 'Starfal', 'kitoxis' ]
+description: 'A cool voucher plugin.'
+website: 'https://starfal.net'
+commands:
+  vouchers:
+    description: 'The main command for the kVouchers plugin.'
+    aliases: [ 'kvouchers', 'kv', 'voucher', 'kvoucher' ]

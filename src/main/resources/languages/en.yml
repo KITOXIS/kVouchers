@@ -1,0 +1,191 @@
+#
+#
+#    ██   ██ ██    ██  ██████  ██    ██  ██████ ██   ██ ███████ ██████  ███████
+#    ██  ██  ██    ██ ██    ██ ██    ██ ██      ██   ██ ██      ██   ██ ██
+#    █████   ██    ██ ██    ██ ██    ██ ██      ███████ █████   ██████  ███████
+#    ██  ██   ██  ██  ██    ██ ██    ██ ██      ██   ██ ██      ██   ██      ██
+#    ██   ██   ████    ██████   ██████   ██████ ██   ██ ███████ ██   ██ ███████
+#
+#  This is the english messages file for the plugin.
+#  You can change the values to your liking.
+#  If you have any questions, feel free to ask in the support discord.
+#  https://starfal.net/discord
+#
+General:
+  Prefix: "<gradient:dark_purple:light_purple>kVouchers</gradient> <light_purple>◆"
+  Reloaded: "%prefix% &aReloaded!"
+  kVouchers-Usage: "%prefix% &cUsage: /kvouchers <reload>"
+  No-Permission: "%prefix% &cInsufficient Permissions! &7(%permission%)"
+Voucher-Main:
+  Title: "&8kVouchers"
+  Buttons:
+    Create:
+      Title: "&7Create a voucher."
+      Lore:
+        - "&7Click to create a voucher."
+    Delete:
+      Title: "&7Delete a voucher."
+      Lore:
+        - "&7Click to delete a voucher."
+    Rename:
+      Title: "&7Rename a voucher."
+      Lore:
+        - "&7Click to rename a voucher."
+    List:
+      Title: "&7List all vouchers."
+      Lore:
+        - "&7Click to list all vouchers."
+    Close:
+      Title: "&7Close the menu."
+      Lore:
+        - "&7Click to close the menu."
+
+Voucher-Create:
+  Starting: "%prefix% &eStarting the creation of a voucher..."
+  Menu:
+    Menu-Title: "&8Voucher Creator"
+    Title: "&7Title"
+    Title-Lore:
+      - "&7The title of the voucher."
+      - "&7Current: &e%title%"
+    Title-Enter: "&7Enter the name of the voucher."
+    Description: "&7Description"
+    Description-Lore:
+      - "&7The description of the voucher."
+      - "&7Current: &e%description%"
+    Description-Enter: "&7Enter the description of the voucher."
+    Icon: "&7Icon"
+    Icon-Lore:
+      - "&7The icon of the voucher. (Some item in game)"
+      - "&7Current: &e%icon%"
+    Icon-Select-GUI: "&7Select an icon for the voucher."
+    Icon-GUI-Search: "&7Search for an icon."
+    Icon-GUI-Search-Enter: "&7Enter the name of the item you want to search for."
+    Icon-GUI-Search-Current: "&7Current: &e%search%"
+    Icon-GUI-Search-Result: "&7Search Results"
+    Icon-GUI-Search-Result-None: "&7No results found."
+    Icon-GUI-Search-Result-Back: "&7Back"
+    Icon-GUI-Search-Result-Next: "&7Next"
+    Time: "&7Time"
+    Time-Lore:
+      - "&7The time the voucher will last."
+      - "&7Current: &e%time%"
+    Time-Enter: "&7Enter the time the voucher will last."
+    Uses: "&7Uses"
+    Uses-Lore:
+      - "&7The amount of times the voucher can be redeemed."
+      - "&7Current: &e%uses%"
+    Uses-Enter: "&7Enter the amount of times the voucher can be redeemed."
+    Code: "&7Code"
+    Code-Lore:
+      - "&7The code of the voucher."
+      - "&7Current: &e%code%"
+    Code-Options:
+      Random:
+        Title: "&7Random"
+        Lore:
+          - "&7Click to generate a random code."
+      Custom:
+        Title: "&7Custom"
+        Lore:
+          - "&7Click to enter a custom code."
+        Menu:
+          Title: "&8Custom Code"
+          Code-Enter: "&7Enter the custom code for the voucher."
+    Action: "&7Action"
+    Action-Lore:
+      - "&7The action to perform when the voucher is redeemed."
+      - "&7Current: &e%action-name% - %action%"
+    Actions:
+      Command:
+        Command-Action: "&7Command"
+        Command-Action-Description: "&7The command to run when the voucher is redeemed."
+        Menu:
+          Title: "&8Command"
+          Command: "&7Command"
+          Command-Lore:
+            - "&7The command to run."
+            - "&7Current: &e%command%"
+          Command-Enter: "&7Enter the command to run. (Without /)"
+      Message:
+        Message-Action: "&7Message"
+        Message-Action-Description: "&7The message to send when the voucher is redeemed."
+        Menu:
+          Title: "&8Message Player"
+          Message: "&7Message"
+          Message-Lore:
+            - "&7The message to send to the player."
+            - "&7Current: &e%message%"
+          Message-Enter: "&7Enter the message to send to the player."
+      Kick:
+        Kick-Action: "&7Kick"
+        Kick-Action-Description: "&7Kick the player when the voucher is redeemed."
+        Menu:
+          Title: "&8Kick Player"
+          Reason: "&7Reason"
+          Reason-Lore:
+            - "&7The reason for the kick."
+            - "&7Current: &e%reason%"
+          Reason-Enter: "&7Enter the reason for the kick."
+      Ban:
+        Ban-Action: "&7Ban"
+        Ban-Action-Description: "&7Ban the player when the voucher is redeemed."
+        Menu:
+          Title: "&8Ban Player"
+          Reason: "&7Reason"
+          Reason-Description: "&7The reason for the ban."
+          Reason-Current: "&7Current: &e%reason%"
+          Reason-Enter: "&7Enter the reason for the ban."
+          Time: "&7Time"
+          Time-Lore:
+            - "&7The time the player will be banned for."
+            - "&7Current: &e%time%"
+          Time-Enter: "&7Enter the time the player will be banned for."
+      Give:
+        Give-Action: "&7Give"
+        Give-Action-Description: "&7Give the player an item when the voucher is redeemed."
+        Menu:
+          Title: "&8Give Item"
+          Item: "&7Item"
+          Item-Lore:
+            - "&7The item to give the player."
+            - "&7Current: &e%item%"
+          Item-Select-GUI: "&7Select an item to give."
+          Item-GUI-Search: "&7Search for an item."
+          Item-GUI-Search-Enter: "&7Enter the name of the item you want to search for."
+          Item-GUI-Search-Current: "&7Current: &e%search%"
+          Item-GUI-Search-Result: "&7Search Results"
+          Item-GUI-Search-Result-None: "&7No results found."
+          Item-GUI-Search-Result-Back: "&7Back"
+          Item-GUI-Search-Result-Next: "&7Next"
+          Amount: "&7Amount"
+          Amount-Lore:
+            - "&7The amount of the item to give."
+            - "&7Current: &e%amount%"
+          Amount-Enter: "&7Enter the amount of the item to give."
+    Create: "&7Create Voucher"
+    Create-Lore:
+      - "&7Title: &e%title%"
+      - "&7Description: &e%description%"
+      - "&7Icon: &e%icon%"
+      - "&7Action: &e%action-name% - %action%"
+      - "&7Time: &e%time%"
+      - "&7Uses: &e%uses%"
+      - "&7Code: &e%code%"
+      - "&7Click to create the voucher."
+    Cancel: "&7Cancel"
+    Back: "&7Back to main menu."
+  Created: "&aVoucher %voucher% created! &7Code: &e%code%"
+
+Player-Messages:
+  Redeemed-Voucher: "%prefix% &aYou have redeemed the voucher &e%voucher%&a!"
+  Voucher-Expired: "%prefix% &cThe voucher &e%voucher% &chas expired!"
+  Voucher-Not-Found: "%prefix% &cThe voucher &e%voucher% &cwas not found!"
+  Voucher-Already-Redeemed: "%prefix% &cThe voucher &e%voucher% &chas already been redeemed!"
+  Voucher-Menu:
+    Title: "&8Redeem Voucher"
+    Voucher: "&7Voucher"
+    Voucher-Lore:
+      - "&7The code of the voucher you want to redeem."
+      - "&7Current: &e%voucher%"
+    Click-To-Redeem: "&7Click to redeem the voucher."
