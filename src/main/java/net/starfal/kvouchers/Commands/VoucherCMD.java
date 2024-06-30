@@ -2,8 +2,7 @@ package net.starfal.kvouchers.Commands;
 
 import net.starfal.kvouchers.Functions.Color;
 import net.starfal.kvouchers.KVouchers;
-import net.starfal.kvouchers.MenuManager.Menus.CreateVoucher.MainVoucherCreate;
-import net.starfal.kvouchers.MenuManager.Menus.VoucherMain;
+import net.starfal.kvouchers.Menus.OpenMainMenu;
 import net.starfal.kvouchers.Settings.Settings;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -25,7 +24,7 @@ public class VoucherCMD implements TabExecutor {
                         p.sendMessage(Color.format("&cPermission not set in config. Please contact an admin to fix this issue."));
                     }
                     if (p.hasPermission(perm)) {
-                        new VoucherMain(KVouchers.getPlayerMenuUtility(p)).open();
+                        OpenMainMenu.getInstance().open(p);
                         return true;
                     } else {
                         String msg = (String) Settings.getInstance().getLang("General.No-Permission");
@@ -42,7 +41,7 @@ public class VoucherCMD implements TabExecutor {
                                 p.sendMessage(Color.format("&cPermission not set in config. Please contact an admin to fix this issue."));
                             }
                             if (p.hasPermission(perm)) {
-                                new MainVoucherCreate(KVouchers.getPlayerMenuUtility(p)).open();
+                                OpenMainMenu.getInstance().open(p);
                                 return true;
                             } else {
                                 String msg = (String) Settings.getInstance().getLang("General.No-Permission");
@@ -57,7 +56,7 @@ public class VoucherCMD implements TabExecutor {
                                 p.sendMessage(Color.format("&cPermission not set in config. Please contact an admin to fix this issue."));
                             }
                             if (p.hasPermission(perm)) {
-                                new VoucherMain(KVouchers.getPlayerMenuUtility(p)).open();
+                                OpenMainMenu.getInstance().open(p);
                                 return true;
                             } else {
                                 String msg = (String) Settings.getInstance().getLang("General.No-Permission");
@@ -72,7 +71,7 @@ public class VoucherCMD implements TabExecutor {
                                 p.sendMessage(Color.format("&cPermission not set in config. Please contact an admin to fix this issue."));
                             }
                             if (p.hasPermission(perm)) {
-                                new VoucherMain(KVouchers.getPlayerMenuUtility(p)).open();
+                                OpenMainMenu.getInstance().open(p);
                                 return true;
                             } else {
                                 String msg = (String) Settings.getInstance().getLang("General.No-Permission");
@@ -106,7 +105,7 @@ public class VoucherCMD implements TabExecutor {
                                 p.sendMessage(Color.format("&cPermission not set in config. Please contact an admin to fix this issue."));
                             }
                             if (p.hasPermission(perm)) {
-                                new VoucherMain(KVouchers.getPlayerMenuUtility(p)).open();
+                                OpenMainMenu.getInstance().open(p);
                                 return true;
                             } else {
                                 String msg = (String) Settings.getInstance().getLang("General.No-Permission");

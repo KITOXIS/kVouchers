@@ -27,10 +27,6 @@ Voucher-Main:
       Title: "&7Delete a voucher."
       Lore:
         - "&7Click to delete a voucher."
-    Rename:
-      Title: "&7Rename a voucher."
-      Lore:
-        - "&7Click to rename a voucher."
     List:
       Title: "&7List all vouchers."
       Lore:

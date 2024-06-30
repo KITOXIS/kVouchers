@@ -1,4 +1,4 @@
-package net.starfal.kvouchers.Menus;
+package net.starfal.kvouchers.MenuSystems;
 
 import com.github.stefvanschie.inventoryframework.font.util.Font;
 import com.github.stefvanschie.inventoryframework.gui.GuiItem;
@@ -7,14 +7,10 @@ import com.github.stefvanschie.inventoryframework.pane.Orientable;
 import com.github.stefvanschie.inventoryframework.pane.OutlinePane;
 import com.github.stefvanschie.inventoryframework.pane.PaginatedPane;
 import com.github.stefvanschie.inventoryframework.pane.Pane;
-import com.github.stefvanschie.inventoryframework.pane.component.Label;
 import net.starfal.kvouchers.Functions.Color;
 import net.starfal.kvouchers.Functions.InventoryUtils;
-import org.bukkit.Bukkit;
+import net.starfal.kvouchers.Functions.Skull;
 import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.Arrays;
 import java.util.Deque;
@@ -60,8 +56,8 @@ public class ItemPaletteGUI extends ChestGui
         pane.setOrientation(Orientable.Orientation.HORIZONTAL);
         pane.setGap(7);
 
-        pane.addItem(PageController.PREVIOUS.toItemStack(this, Color.format("<red>Back"), this.itemsPane, Material.PLAYER_HEAD));
-        pane.addItem(PageController.NEXT.toItemStack(this, Color.format("<green>Next"), this.itemsPane, Material.PLAYER_HEAD));
+        pane.addItem(PageController.PREVIOUS.toItemStack(this, Color.format("<red>Back"), this.itemsPane));
+        pane.addItem(PageController.NEXT.toItemStack(this, Color.format("<green>Next"), this.itemsPane));
 
         return pane;
     }
@@ -102,36 +98,29 @@ public class ItemPaletteGUI extends ChestGui
 
     private enum PageController
     {
-        PREVIOUS("MHF_ArrowLeft", (page, itemsPane) -> page > 0, page -> --page),
-        NEXT("MHF_ArrowRight", (page, itemsPane) -> page < (itemsPane.getPages()-1), page -> ++page);
+        PREVIOUS("⏴", Font.WHITE, (page, itemsPane) -> page > 0, page -> --page),
+        NEXT("⏵", Font.WHITE, (page, itemsPane) -> page < (itemsPane.getPages()-1), page -> ++page);
 
         private final String skullName;
+        private final Font font;
         private final BiPredicate<Integer, PaginatedPane> shouldContinue;
         private final IntUnaryOperator nextPageSupplier;
 
-        private PageController(String skullName, BiPredicate<Integer, PaginatedPane> shouldContinue, IntUnaryOperator nextPageSupplier)
+        private PageController(String skullName, Font font, BiPredicate<Integer, PaginatedPane> shouldContinue, IntUnaryOperator nextPageSupplier)
         {
             this.skullName = skullName;
+            this.font = font;
             this.shouldContinue = shouldContinue;
             this.nextPageSupplier = nextPageSupplier;
         }
 
         @SuppressWarnings("deprecation")
-        public GuiItem toItemStack(ChestGui gui, String itemName, PaginatedPane itemsPane, Material material)
+        public GuiItem toItemStack(ChestGui gui, String itemName, PaginatedPane itemsPane)
         {
-            Label label = new Label(0, 0, 9, 6, Font.WHITE);
-            if (this == PREVIOUS) {
-                label.setText("←");
-            } else if (this == NEXT) {
-                label.setText("→");
-            }
+            GuiItem item = Skull.create(itemName, this.skullName, Font.OAK_PLANKS, 1, 1);
 
-            ItemStack item = new ItemStack(material); // use the actual material
-            ItemMeta meta = item.getItemMeta();
-            meta.setDisplayName(itemName);
-            item.setItemMeta(meta);
-
-            return new GuiItem(item, event ->
+            assert item != null;
+            item.setAction(event ->
             {
                 int currentPage = itemsPane.getPage();
 
@@ -141,6 +130,8 @@ public class ItemPaletteGUI extends ChestGui
                 itemsPane.setPage(this.nextPageSupplier.applyAsInt(currentPage));
                 gui.update();
             });
+
+            return item;
         }
     }
 
