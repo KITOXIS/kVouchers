@@ -2,10 +2,10 @@ package net.starfal.kvouchers.MenuManager.Menus.CreateVoucher;
 
 import net.kyori.adventure.text.Component;
 import net.starfal.kvouchers.Functions.Color;
-import net.starfal.kvouchers.MenuManager.IconSelector;
 import net.starfal.kvouchers.MenuManager.Menu;
 import net.starfal.kvouchers.MenuManager.Menus.VoucherMain;
 import net.starfal.kvouchers.MenuManager.PlayerMenuUtility;
+import net.starfal.kvouchers.Menus.IconSelectorForCreate;
 import net.starfal.kvouchers.Settings.Settings;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -42,7 +42,7 @@ public class MainVoucherCreate extends Menu {
                 break;
             case 12:
                 playerMenuUtility.getOwner().closeInventory();
-                IconSelector.iconSelectorGUI(playerMenuUtility.getOwner());
+                IconSelectorForCreate.getInstance().open(playerMenuUtility.getOwner()) ;
                 break;
         }
     }
